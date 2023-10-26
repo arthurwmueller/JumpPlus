@@ -1,0 +1,46 @@
+Movie Review Application (To Do: Think of a catchier name)
+
+Requirements/Road Map
+
+Back End (MVP)
+
+Users
+	Full CRUD for users
+
+Movies
+	Full CRUD for movies
+	Movie table will be formatted to match TMDB API to aid post MVP integration
+
+Reviews
+	Full CRUD for reviews
+	Every review will reference a user and a movie
+
+Thumbs Up
+	Post MVP
+	Thumbs Up table will reference a user and a review
+	Users can only give a review "two thumbs up" once
+
+Security
+	Spring Security
+	User Authentication
+	JWT Token
+	All of these things I have done before in previous projects
+
+Testing
+	There should be some testing, probably not great coverage for MVP, will work on this post MVP
+
+Front End (Post MVP)
+
+Anticipating all front end to be post MVP due to capacity issues
+
+Users can use the front end to register and log in
+
+Users can search for movies
+	Integration with TMDB API to help users search
+
+Users can write and edit their own reviews of movies
+	When a user writes/edits a review, the review is saved in the review table and details from the movie from TMDB API are saved in the movie table
+	Hope to reduce API calls to TMDB API by only calling movie details when a review is created/edited and then saving those details in the back end db for easier retrieval
+
+Users can give reviews they find insightful "two thumbs up"
+	Reviews with the most "two thumbs up" ratings will be shown first
